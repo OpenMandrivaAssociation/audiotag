@@ -35,3 +35,10 @@ Audiotag is a command-line tool for mass tagging/renaming of audio files.
 %doc COPYING README ChangeLog
 %{_bindir}/%{name}
 
+
+
+%changelog
+* Fri Feb 17 2012 Andrey Bondrov <abondrov@mandriva.org> 0.19-1
++ Revision: 776003
+- imported package audiotag
+
