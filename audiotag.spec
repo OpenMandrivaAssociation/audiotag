@@ -2,7 +2,7 @@
 
 Name:		audiotag
 Version:	0.19
-Release:	%mkrel 1
+Release:	2
 Summary:	Command-line tool for mass tagging/renaming of audio files
 License:	GPLv2
 Group:		Sound
