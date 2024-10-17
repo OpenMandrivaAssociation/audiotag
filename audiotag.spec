@@ -6,7 +6,7 @@ Release:	2
 Summary:	Command-line tool for mass tagging/renaming of audio files
 License:	GPLv2
 Group:		Sound
-URL:		http://github.com/Daenyth/audiotag
+URL:		https://github.com/Daenyth/audiotag
 Source0:	%{name}-%{version}.tar.gz
 BuildArch:	noarch
 Requires:	id3lib
