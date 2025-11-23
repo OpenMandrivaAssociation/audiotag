@@ -1,44 +1,34 @@
-# spec is based on MIB work
-
-Name:		audiotag
+Summary:	Command-line tool for mass tagging/renaming of audio files
+Name:	audiotag
 Version:	0.19
 Release:	2
-Summary:	Command-line tool for mass tagging/renaming of audio files
-License:	GPLv2
-Group:		Sound
-URL:		https://github.com/Daenyth/audiotag
-Source0:	%{name}-%{version}.tar.gz
+License:	GPLv2+
+Group:	Sound
+Url:	https://github.com/Daenyth/audiotag
+Source0:	https://github.com/Daenyth/audiotag/archive/refs/tags/%{name}-%{version}.tar.gz
 BuildArch:	noarch
-Requires:	id3lib
-Requires:	flac
 Requires:	atomicparsley
+Requires:	flac
+Requires:	id3lib
 
 %description
 Audiotag is a command-line tool for mass tagging/renaming of audio files.
 
-%prep
-%setup -q
-
-%build
-
-%install
-%__rm -rf %{buildroot}
-
-%__mkdir_p %{buildroot}%{_bindir}
-%__install -m755 %{name} %{buildroot}%{_bindir}/%{name}
-
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,)
 %doc COPYING README ChangeLog
 %{_bindir}/%{name}
 
+#-----------------------------------------------------------------------------
+
+%prep
+%autosetup -p1
 
 
-%changelog
-* Fri Feb 17 2012 Andrey Bondrov <abondrov@mandriva.org> 0.19-1
-+ Revision: 776003
-- imported package audiotag
+%build
+# Perl script: nothing to do
 
+
+%install
+# Go manually
+mkdir -p %{buildroot}%{_bindir}
+install -m755 %{name} %{buildroot}%{_bindir}/%{name}
